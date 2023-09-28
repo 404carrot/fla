@@ -1,0 +1,17 @@
+<section class="container">
+
+<header class="header d-flex">
+
+    <h2 class="ff-inter">Mural</h2>
+<button routerlink="" class="botao">Adicione</button>
+</header>
+
+<div class="mural"  >
+    <div *ngFor="let pensamento of mural ">
+        <app-mensagens [pensamento]="pensamento"></app-mensagens>
+
+    </div>
+
+</div>
+
+</section>
