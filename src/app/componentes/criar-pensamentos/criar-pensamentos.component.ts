@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Mural } from '../pensamentos/interface';
+import { ServicesService } from '../pensamento/services.service';
 
 @Component({
   selector: 'app-criar-pensamentos',
@@ -7,22 +9,31 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CriarPensamentosComponent implements OnInit {
 
- pensamento ={
-id: '1',
-conteudo:'texto generico',
-autoria:'texto generico',
+ pensamento: Mural ={
+
+conteudo:'',
+autoria:'',
 modelo:'modelo1'
 
 
 }
-  constructor() { }
+  constructor(private service:ServicesService
+    
+    
+    
+    ) { }
 
   ngOnInit(): void {
   }
 
+
+
+
+
+  
   salvar(){
 
-alert("salvo")
+this.service.cadastrar(this.pensamento).subscribe()
 
   }
 

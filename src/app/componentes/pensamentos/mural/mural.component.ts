@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Mural } from '../interface';
+import { ServicesService } from '../../pensamento/services.service';
 
 @Component({
   selector: 'app-mural',
@@ -7,23 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MuralComponent implements OnInit {
 
- mural = [
-{
-  conteudo:'hello',
-  autoria:'world',
-  modelo:'modelo1'
-},
-{
-  conteudo:'segundo teste',
-  autoria:'teste 2',
-  modelo:'modelo3'
-}
+ mural:Mural[] = [
+
+
   
 ];
 
-  constructor() { }
+  constructor(private service: ServicesService) { }
 
   ngOnInit(): void {
+
+this.service.listar().subscribe((mural) =>{
+
+
+this.mural = mural
+
+
+})
+
   }
+
 
 }
