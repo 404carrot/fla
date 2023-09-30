@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { MuralComponent } from './componentes/pensamentos/mural/mural.component';
 import { MensagensComponent } from './componentes/pensamento/mensagens/mensagens.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ExcluirComponent } from './componentes/pensamento/excluir/excluir.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
     RodaPeComponent,
     CriarPensamentosComponent,
     MuralComponent,
-    MensagensComponent
+    MensagensComponent,
+    ExcluirComponent
   ],
   imports: [
     BrowserModule,

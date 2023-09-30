@@ -24,4 +24,20 @@ return this.http.post<Mural>(this.API, mural)
 
 }
 
+excluir(id:number):Observable<Mural>{
+
+const url = `${this.API}/{id}`
+return this.http.delete<Mural>(url)
+
+}
+
+buscaId(id: number): Observable<Mural>{
+
+  const url = `${this.API}/{id}`
+
+  return this.http.get<Mural>(url)
+
+
+}
+
 }

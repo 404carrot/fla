@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Mural } from '../../pensamentos/interface';
 
+
 @Component({
   selector: 'app-mensagens',
   templateUrl: './mensagens.component.html',
